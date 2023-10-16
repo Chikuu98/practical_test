@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ContactPerson;
 use App\Models\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class ListController extends Controller
 {
@@ -54,8 +55,13 @@ class ListController extends Controller
             'city' => 'required|max:100',
             'type' => 'required',
             'customer_id' => 'required',
-            'email' => 'required|email|unique:contact_people,email',
+            'email' => [
+                'required',
+                'email',
+                Rule::unique('contact_people', 'email')->ignore($id),
+            ],
         ]);
+
 
         $ContactPerson = ContactPerson::find($id);
 

@@ -23,7 +23,7 @@
         </a>
     </div>
     @if (session('success'))
-        <div class="bg-green-200 border-l-4 border-green-500 text-green-700 text-center p-4 mb-4 rounded-md">
+        <div class="bg-green-200 border-l-4 border-green-500 text-green-700 text-center p-4 mb-4 mt-2 rounded-md">
             <p class="font-bold">Success!</p>
             <p>{{ session('success') }}</p>
         </div>
