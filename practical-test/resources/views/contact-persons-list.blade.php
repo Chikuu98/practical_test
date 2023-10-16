@@ -47,6 +47,7 @@
                     <tr>
                         <th class="px-4 py-2 bg-blue-200">Name</th>
                         <th class="px-4 py-2 bg-gray-200">City</th>
+                        <th class="px-4 py-2 bg-gray-200">Email</th>
                         <th class="px-4 py-2 bg-blue-200">Type</th>
                         <th class="px-4 py-2 bg-gray-200">Customer Name</th>
                         <th class="px-4 py-2 bg-blue-200">Edit</th>
@@ -58,6 +59,7 @@
                         <tr>
                             <td class="border px-4 py-2">{{ $contactPerson->name }}</td>
                             <td class="border px-4 py-2">{{ $contactPerson->city }}</td>
+                            <td class="border px-4 py-2">{{ $contactPerson->email }}</td>
                             <td class="border px-4 py-2">{{ $contactPerson->type }}</td>
                             <td class="border px-4 py-2">{{ $contactPerson->customer->name }}</td>
                             <td class="border px-4 py-2">

@@ -24,12 +24,16 @@ class ContactPersonController extends Controller
             'city.max' => 'City must not exceed 100 characters.',
             'type.required' => 'Type is required.',
             'customer_id.required' => 'Customer is required.',
+            'email.required' => 'Email is required',
+            'email.email' => 'Email must be a valid email',
+            'email.unique' => 'Email must be unique'
 
         ];
 
         $validatedData = $request->validate([
             'name' => 'required|max:50',
             'city' => 'required|max:100',
+            'email' => 'required|email|unique:contact_people,email',
             'type' => 'required',
             'customer_id' => 'required'
         ], $messages);

@@ -11,9 +11,9 @@ class ContactPerson extends Model
     {
         return $this->belongsTo(Customer::class);
     }
-    
+
     use HasFactory;
     protected $fillable = [
-        'name', 'city','customer_id', 'type'
+        'name', 'city','customer_id', 'type', 'email'
     ];
 }
