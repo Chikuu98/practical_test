@@ -45,6 +45,14 @@
                 @enderror
             </div>
             <div class="mb-4">
+                <label for="email" class="block text-gray-700">Email:</label>
+                <input type="emal" id="email" name="email" value="{{ $contactPerson->email }}"
+                    class="w-full border rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-400">
+                @error('email')
+                    <div class="text-red-500 text-sm mt-1">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="mb-4">
                 <label for="type" class="block text-gray-700">Type:</label>
                 <select id="type" name="type"
                     class="w-full border rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-400">

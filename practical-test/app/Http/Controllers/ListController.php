@@ -53,7 +53,8 @@ class ListController extends Controller
             'name' => 'required|max:50',
             'city' => 'required|max:100',
             'type' => 'required',
-            'customer_id' => 'required'
+            'customer_id' => 'required',
+            'email' => 'required|email|unique:contact_people,email',
         ]);
 
         $ContactPerson = ContactPerson::find($id);
